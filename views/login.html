@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html ng-app = "linkedInApp">
+<head> 
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script> -->
+	<script src = "../routes/angular.js"></script>
+	<link rel="stylesheet" type="text/css"
+    href="https://static.licdn.com/scds/concat/common/css?h=765zh9odycznutep5f0mj07m4-38so5ftc5lv2bbm0jf5rvv1qj-7mxyksftlcjzimz2r05hd289r-4uu2pkz5u0jch61r2nhpyyrn8-dxl1g2k3wk6qpss8oq9lwul9c-7poavrvxlvh0irzkbnoyoginp-4om4nn3a2z730xs82d78xj3be-mea0xb6thaagfbcx9i1vg82z-ct4kfyj4tquup0bvqhttvymms-3pwwsn1udmwoy3iort8vfmygt&amp;fc=1">
+	<link rel="stylesheet" type="text/css"
+    href="https://static.licdn.com/scds/concat/common/css?h=3j7af0ffcqjhjiv86qk3c2a18-8k6r9c0fn6s2zy3aofnyobher-71y9b1g6lawr8hhk9tooooxrs-600iu0p7wxo1ubh61afeueql4-npu3qknrq9dxl9o7lthiox77&amp;fc=1">
+</head>
+<body>
+    <dir="ltr" class="guest v2 new-ghome login-in-header chrome-v5 chrome-v5-responsive sticky-bg guest" id="pagekey-guest-home">
+    <noscript>
+        <style type="text/css">
+            #main #stack-show li.photo-card { left: 0; }
+        </style>
+    </noscript>-->
+    <div ng-controller="signInController">
+    <div id="header">
+        <div class="container">
+        	<h1><img src="https://static.licdn.com/scds/common/u/img/logos/logo_132x32_2.png" alt="LinkedIn" class="logo" height="32" width="132"></h1>
+            
+			<p class="textad"></p>
+            <div class="login">
+           		<fieldset>
+                	<legend>Sign In</legend>
+                        <ul>
+                            <li><label for="session_key-login">Email address</label>
+                                <div class="fieldgroup">
+                                    <span class="error" id="session_key-login-error"></span> 
+                                    <input type="text" ng-model="email"  id="session_key-login"
+                                        autofocus tabindex="1" size="27" data-ime-mode-disabled>
+                                </div></li>
+                            <li><label for="session_password-login">Password</label> 
+                                <div class="fieldgroup">
+                                    <span class="error" id="session_password-login-error"></span> 
+                                    <input type="password" ng-model="password"  value=""
+                                        id="session_password-login" tabindex="2" size="27">
+                                </div></li>
+                            <li class="button"><input type="submit" ng-click="login()" name="signin"
+                                value="Sign In" id="signin" tabindex="3" class="btn-secondary">
+                            </li>
+                        </ul>
+                </fieldset>
+            </div>
+        </div>
+        
+    </div>
+    </div>
+    <div ng-controller="signUpController">
+    <div id="main-wrapper">
+        <div id="main">
+            <div id="global-error">
+            </div>  
+            <header>
+                <div id="content">
+                    <h2><span class="text-gradient"></span><span class="headline"><script>utmx_section("Headline")</script>
+                    Be great at what you do.
+                    </noscript></span></h2>
+                </div>
+            </header>
+            <section>
+                <div class="two-row-image">
+                    <img src="https://static.licdn.com/scds/common/u/images/apps/home/guesthome/ghp_international_1_150x150_v1.png" width="150" height="150" alt="Male Headshot">
+                    <img src="https://static.licdn.com/scds/common/u/images/apps/home/guesthome/ghp_international_2_150x150_v1.png" width="150" height="150" alt="Female Headshot">
+                    <img src="https://static.licdn.com/scds/common/u/images/apps/home/guesthome/ghp_international_3_150x150_v1.png" width="150" height="150" alt="Male Headshot">
+                    <img src="https://static.licdn.com/scds/common/u/images/apps/home/guesthome/ghp_international_4_150x150_v1.png" width="150" height="150" alt="Female Headshot">
+                    <img src="https://static.licdn.com/scds/common/u/images/apps/home/guesthome/ghp_international_5_150x150_v1.png" width="150" height="150" alt="Male Headshot">
+                    <img src="https://static.licdn.com/scds/common/u/images/apps/home/guesthome/ghp_international_6_150x150_v1.png" width="150" height="150" alt="Male Headshot">
+                </div>
+            </section>
+            <section>
+                <div class="leo-module mod-feat jointoday" id="module-id3">
+                    <div class="header"><h2>Get started &ndash; it&rsquo;s free.</h2></div>
+                        <div class="content">
+                            <p><script>utmx_section("Subtagline")</script>Registration takes less than 2 minutes.</p>
+                            <font color="red">{{existingUser}}</font>                                
+                            <fieldset>
+                            	<legend>Sign Up</legend>
+                                <ul>
+                                	<li id="first-name">
+	                                    <label for="firstName-coldRegistrationForm">First name</label>
+	                                    <span class="error" id="firstName-coldRegistrationForm-error"></span>
+	                                    <div class="fieldgroup">
+	                                        <input type="text" ng-model="firstName" id="firstName-coldRegistrationForm" autocomplete="on" size="55" maxlength="20" tabindex="5">
+	                                    </div>
+	                                </li>
+	                                <li id="last-name">
+	                                    <label for="lastName-coldRegistrationForm">Last name</label>
+	                                    <span class="error" id="lastName-coldRegistrationForm-error"></span>
+	                                    <div class="fieldgroup">
+	                                        <input type="text" ng-model="lastName" id="lastName-coldRegistrationForm" autocomplete="on" size="55" maxlength="40" tabindex="6">
+	                                    </div>
+	                                </li>
+	                                <li id="email-address">
+	                                    <label for="email-coldRegistrationForm">Email address</label>
+	                                    <span class="error" id="email-coldRegistrationForm-error"></span>
+	                                    <div class="fieldgroup">
+	                                        <input type="email" ng-model="newUserEmail" id="email-coldRegistrationForm" type="email" autocomplete="on" size="55" maxlength="128" tabindex="7" data-ime-mode-disabled>
+	                                    </div>
+	                                </li>
+	                                <li id="password">
+	                                    <label for="password-coldRegistrationForm">Password (6 or more characters)</label>
+	                                    <span class="error" id="password-coldRegistrationForm-error"></span>
+	                                    <div class="fieldgroup">
+	                                        <input type="password" ng-model="newUserPassword" id="password-coldRegistrationForm" tabindex="8">
+	                                    </div>
+	                                </li>
+                                </ul>                                 
+                           		<div class="form-bottom-row">                                     
+                                	<input type="submit" ng-click="signUpSubmit()" value="Join now" id="btn-submit" class="btn-action" tabindex="9"></noscript>
+                                </div>
+                    	</fieldset>                                                      
+                    </div>
+                </div>
+            </section>
+             
+        </div>
+    </div>
+    </div>
+    </dir>
+	<script src="https://static.licdn.com:443/scds/common/u/lib/fizzy/fz-1.3.8-min.js" type="text/javascript"></script>
+	<script src = "../angular_controller/js/loginjs.js"></script>
+	<script src = "../routes/angular-cookies.js"></script>
+	</div>
+</body>
+</html>
