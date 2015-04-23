@@ -2,7 +2,7 @@
 var ejs = require("ejs");
 
 function login(req, res) {
-	ejs.renderFile('./views/login.html', function(err, result) {
+	ejs.renderFile('./views/newLogin.html', function(err, result) {
 		if (!err) {
 			res.end(result);
 		} else {
@@ -13,8 +13,7 @@ function login(req, res) {
 }
 
 function successLogin(req, res) {
-	req.session.usrname = req.params.user;
-	ejs.renderFile('./views/successlogin.html', function(err, result){
+	ejs.renderFile('./views/homePage.html', function(err, result){
 		if(!err) {
 			console.log("Success Page");
 			res.end(result);
